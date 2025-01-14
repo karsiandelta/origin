@@ -1,0 +1,11 @@
+{
+  "hosting": {
+    "site": "karsiandelta-8179d",  // <-- Elimina el espacio al principio de esta línea
+    "public": "dist",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

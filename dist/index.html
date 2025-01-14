@@ -1,0 +1,64 @@
+<!doctype html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Bienvenido</title><style>body {
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #f0f0f0;
+      margin: 0;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3em;
+      color: #333;
+      margin-bottom: 1em;
+    }
+
+    #start-button {
+      background-color: #007bff;
+      color: white;
+      padding: 1em 2em;
+      font-size: 1.2em;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    #start-button:hover {
+      background-color: #0056b3;
+    }
+
+    .auth-options {
+      display: none;
+      margin-top: 2em;
+    }
+
+    .auth-options button {
+      background-color: #6c757d;
+      color: white;
+      padding: 0.8em 1.5em;
+      font-size: 1em;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 0 1em;
+      transition: all 0.3s ease;
+    }
+
+    .auth-options button:hover {
+      background-color: #5a6268;
+    }</style><script defer="defer" src="index.bundle.js"></script></head><body><div class="container"><h1>Bienvenido a nuestra plataforma</h1><button id="start-button">Empezar en grande</button><div class="auth-options"><button onclick="window.location.href='register.html'">Registrarse</button> <button onclick="window.location.href='login.html'">Iniciar sesión</button></div></div><script>const startButton = document.getElementById('start-button');
+    const authOptions = document.querySelector('.auth-options');
+
+    startButton.addEventListener('click', () => {
+      startButton.style.opacity = 0; // Desvanece el botón
+      setTimeout(() => {
+        startButton.style.display = 'none';
+        authOptions.style.display = 'block';
+      }, 300); // Espera 300ms (tiempo de la transición) antes de ocultar el botón
+    });</script></body></html>

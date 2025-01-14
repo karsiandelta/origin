@@ -1,0 +1,161 @@
+/* Variables CSS */
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #0056b3;
+  --light-color: #f4f4f4;
+  --dark-color: #333;
+}
+
+/* Estilos generales */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  background: var(--light-color);
+  color: var(--dark-color);
+}
+
+header {
+  background: #fff;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex; /* Usa flexbox para centrar el contenido */
+  flex-direction: column; /* Alinea los elementos en columna */
+  align-items: center; /* Centra horizontalmente */
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  color: var(--dark-color);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Sombra de texto */
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex; /* Usa flexbox para el menú */
+  justify-content: center; /* Centra los elementos del menú */
+  width: 100%; 
+}
+
+nav li {
+  margin: 0 10px; /* Ajusta el margen entre elementos del menú */
+}
+
+nav a {
+  text-decoration: none;
+  color: #555;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  padding: 10px; /* Añade padding a los enlaces */
+  border-radius: 5px; /* Bordes redondeados en los enlaces */
+}
+
+nav a:hover {
+  color: var(--primary-color);
+  background-color: rgba(0, 123, 255, 0.1); /* Fondo sutil al pasar el ratón */
+}
+
+main {
+  padding: 20px;
+}
+
+section {
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color: var(--dark-color);
+  margin-top: 0;
+}
+
+/* Efecto de degradado en los botones */
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-image: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px); 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Efecto hover en las cards */
+.card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative; /* Para posicionar el botón dentro de la card */
+}
+
+.card:hover {
+  transform: translateY(-5px); 
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card .button {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+/* Tipografía creativa */
+.title {
+  font-size: 2em;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
+}
+
+/* Footer */
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Estilos para el menú de usuario */
+.user-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: none; 
+  z-index: 10; 
+}
+
+.user-menu span {
+  display: block;
+  padding: 0.5em 1em;
+  font-weight: bold;
+}
+
+.user-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.user-menu li a {
+  display: block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  color: #333;
+}

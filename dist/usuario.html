@@ -1,0 +1,76 @@
+<!doctype html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Perfil de Usuario</title><style>body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background: #007bff; /* Color de fondo del encabezado */
+      color: white;
+      padding: 1em 0;
+      text-align: center;
+    }
+
+    nav ul {
+      padding: 0;
+      list-style: none;
+    }
+
+    nav ul li {
+      display: inline;
+      margin: 0 20px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+    }
+
+    main {
+      padding: 20px;
+      max-width: 800px;
+      margin: 20px auto;
+      background: white;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      margin-top: 0;
+    }
+
+    h2 {
+      color: #007bff; /* Color del texto de los títulos */
+    }
+
+    #user-info {
+      margin-bottom: 2em;
+    }
+
+    #user-info p {
+      margin: 0.5em 0;
+    }
+
+    #user-actions button {
+      background-color: #dc3545; /* Color de fondo del botón */
+      color: white;
+      padding: 0.8em 1.5em;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #user-actions button:hover {
+      background-color: #c82333; /* Color de fondo del botón al pasar el ratón */
+    }
+
+    #back-button {
+      display: block;
+      margin-top: 2em;
+      text-align: center;
+    }
+
+    #back-button a {
+      color: #007bff; /* Color del enlace */
+      text-decoration: none;
+    }</style><script defer="defer" src="usuario.bundle.js"></script></head><body><header><h1>Perfil de Usuario</h1><nav><ul><li><a href="index.html">Inicio</a></li><li><a href="novedades.html">Novedades</a></li><li><a href="usuario.html">Mi perfil</a></li></ul></nav></header><main><section id="user-info"><h2>Información del usuario</h2><p>Nombre: <span id="user-name"></span></p><p>Email: <span id="user-email"></span></p></section><section id="user-actions"><h2>Acciones</h2><button id="logout-button">Cerrar sesión</button></section><div id="back-button"><a href="#" onclick="history.back()">Volver</a></div></main><footer><p>&copy; 2025 RRPPWEB</p></footer><script type="module" src="dist/usuario.bundle.js"></script></body></html>
