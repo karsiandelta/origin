@@ -8,7 +8,9 @@ module.exports = {
     login: './src/login.js',
 	novedades: './src/novedades.js',
     register: './src/register.js',
-    usuario: './src/usuario.js'
+    usuario: './src/usuario.js',
+	bienvenida: './src/bienvenida.js',
+	QR: './src/QR.js'
   },
   output: {
     filename: '[name].bundle.js',
@@ -39,6 +41,16 @@ module.exports = {
       filename: 'novedades.html',
       template: './public/novedades.html',
       chunks: ['novedades']
-    })
+	}),
+    new HtmlWebpackPlugin({
+      filename: 'bienvenida.html',
+      template: './public/bienvenida.html',
+      chunks: ['bienvenida']
+    }),
+	  new HtmlWebpackPlugin({
+      filename: 'QR.html',
+      template: './public/QR.html',
+      chunks: ['QR']
+	})
   ],
 };

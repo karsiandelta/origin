@@ -1,0 +1,19 @@
+<!doctype html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Bienvenido</title><link rel="stylesheet" href="style.css"><style>/* ... (estilos CSS) ... */</style><script defer="defer" src="bienvenida.bundle.js"></script></head><body><header><h1>RR.PP zone</h1><nav><ul><li><a href="usuario.html">Mi Perfil</a></li><li><a href="novedades.html">Novedades</a></li><li><a href="#" id="logout-link">Cerrar sesión</a></li><li><a href="QR.html">Mi QR</a></li></ul></nav></header><main><section><h2>¡Hola!</h2><p>Gracias por registrarte en nuestra plataforma. Aquí encontrarás información sobre cómo usarla y aprovechar al máximo sus funciones.</p><p>Explora las diferentes secciones y descubre todo lo que puedes hacer.</p><h3>Tu QR único</h3><p>Próximamente, generaremos un código QR único asociado a tu cuenta. Podrás usarlo para acceder a funciones exclusivas y participar en eventos especiales.</p><p>¡Mantente atento a las novedades!</p><div class="features"></div></section></main><script type="module" src="dist/bienvenida.bundle.js"></script><script type="module">import { initializeApp } from 'firebase/app';
+    import { getAuth, signOut } from 'firebase/auth';
+    import { firebaseConfig } from './firebase.js';
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+
+    // Manejar el cierre de sesión
+    const logoutLink = document.getElementById('logout-link');
+    logoutLink.addEventListener('click', (event) => {
+      event.preventDefault();
+      signOut(auth).then(() => {
+        console.log('Sesión cerrada');
+        window.location.href = 'login.html';
+      }).catch((error) => {
+        console.error('Error al cerrar sesión:', error);
+        alert('Error al cerrar sesión');
+      });
+    });</script></body></html>
